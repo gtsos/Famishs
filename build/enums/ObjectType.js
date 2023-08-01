@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectType = void 0;
+var ObjectType;
+(function (ObjectType) {
+    ObjectType[ObjectType["BERRY_BUSH"] = 0] = "BERRY_BUSH";
+    ObjectType[ObjectType["TREE"] = 1] = "TREE";
+    ObjectType[ObjectType["STONE"] = 2] = "STONE";
+    ObjectType[ObjectType["GOLD"] = 3] = "GOLD";
+    ObjectType[ObjectType["DIAMOND"] = 4] = "DIAMOND";
+    ObjectType[ObjectType["AMETHYST"] = 5] = "AMETHYST";
+    ObjectType[ObjectType["REIDITE"] = 6] = "REIDITE";
+    ObjectType[ObjectType["PALM"] = 7] = "PALM";
+    ObjectType[ObjectType["EMERALD"] = 8] = "EMERALD";
+    ObjectType[ObjectType["CACTUS"] = 9] = "CACTUS";
+    ObjectType[ObjectType["CAVE_STONE"] = 10] = "CAVE_STONE";
+    ObjectType[ObjectType["RIVER"] = 11] = "RIVER";
+    ObjectType[ObjectType["LAKE"] = 12] = "LAKE";
+    ObjectType[ObjectType["ISLAND"] = 13] = "ISLAND";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));

@@ -1,0 +1,2050 @@
+{
+    "viewport": {
+        "width_max": 2560,
+        "height_max": 1440
+    },
+    "server": {
+        "name": "Sea Farm",
+        "playerLimit": 95,
+        "socketLimit": 105,
+        "buildingLimit": 1000
+    },
+    "protection": {
+        "throttleDelay": 1000,
+        "throttleAmount": 10
+    },
+    "inventory": {
+        "startSize": 16,
+        "withBag": true,
+        "bagSize": 16
+    },
+    "other": {
+        "hand_damage": 5,
+        "buildCooldown": 999,
+        "totemCooldown": 30000,
+        "dropCooldown": 599,
+        "plantLifetime": 3840000,
+        "dayInMilliseconds": 480000,
+        "max_treasure": 8,
+        "max_krakens": 8,
+        "max_wolfs": 5,
+        "max_fishs": 250
+    },
+    "items_priority": {
+        "default": [
+            "SWORD_WOOD",
+            "PICK_WOOD",
+            "WOOD_SPEAR",
+            "WOOD_SHIELD",
+            "WOOD_HELMET",
+            "BRIDGE",
+            "GROUND",
+            "SAND",
+            "WHEAT_SEED",
+            "SEED",
+            "WATERING_CAN",
+            "FIRE",
+            "PAPER"
+        ],
+        "common": [
+            "BIG_FIRE",
+            "BREAD_OVEN",
+            "WORKBENCH",
+            "BANDAGE",
+            "CHEST",
+            "LOCK",
+            "ROOF",
+            "PLOT",
+            "CARROT_SEED",
+            "TOMATO_SEED",
+            "GARLIC_SEED",
+            "WATERMELON_SEED",
+            "PUMPKIN_SEED",
+            "THORNBUSH_SEED",
+            "EARMUFFS",
+            "PEASANT",
+            "EXPLORER_HAT",
+            "SHOVEL_GOLD",
+            "GOLD_SPEAR",
+            "SPEAR",
+            "SWORD_GOLD",
+            "SWORD",
+            "HAMMER_GOLD",
+            "HAMMER",
+            "GOLD_HELMET",
+            "CORD",
+            "SCALES",
+            "SPANNER",
+            "MACHETE",
+            "PITCHFORK"
+        ],
+        "rare": [
+            "SWORD_AMETHYST",
+            "SWORD_DIAMOND",
+            "LOCKPICK",
+            "BOAT",
+            "AMETHYST_HELMET",
+            "DIAMOND_HELMET",
+            "AMETHYST_SPEAR",
+            "DIAMOND_SPEAR",
+            "DIVING_MASK",
+            "PIRATE_HAT",
+            "HOOD",
+            "SHOVEL_AMETHYST",
+            "SHOVEL_DIAMOND",
+            "PICK_AMETHYST",
+            "PICK_DIAMOND",
+            "HAMMER_AMETHYST",
+            "HAMMER_DIAMOND",
+            "BOOK",
+            "WINDMILL",
+            "RESURRECTION"
+        ],
+        "super_rare": [
+            "KRAKEN_SKIN",
+            "SUPER_HAMMER",
+            "BED",
+            "SUPER_DIVING_SUIT",
+            "PIRATE_SWORD"
+        ]
+    },
+    "entities": {
+        "player": {
+            "speed_forest_default": 24,
+            "speed_collides": 12,
+            "speed_weapon": 18,
+            "speed_attack_decrease": 3,
+            "hitbox_size": 25
+        },
+        "boar": {
+            "speed_forest_default": 24,
+            "speed_collides": 10,
+            "hitbox_size": 25,
+            "damage": 50,
+            "drop": ["FUR_BOAR"],
+            "give_score": 150,
+            "allowedBiomes": ["FOREST", "WINTER", "DRAGON"]
+        },
+        "rabbit": {
+            "speed_forest_default": 24,
+            "speed_collides": 10,
+            "hitbox_size": 25,
+            "damage": 0,
+            "drop": [["FUR", 1], ["MEAT", 1]],
+            "give_score": 150,
+            "allowedBiomes": ["FOREST"]
+        },
+        "wolf": {
+            "speed_forest_default": 24,
+            "speed_collides": 10,
+            "hitbox_size": 20,
+            "damage": 40,
+            "drop": [["FUR_WOLF", 2], ["MEAT", 2]],
+            "give_score": 150,
+            "allowedBiomes": ["FOREST"]
+        },
+        "piranha": {
+            "speed_forest_default": 24,
+            "speed_collides": 10,
+            "hitbox_size": 20,
+            "damage": 40,
+            "drop": [["FOODFISH", 2], ["SCALES", 1]],
+            "give_score": 150,
+            "allowedBiomes": ["SEA"]
+        },
+        "kraken": {
+            "speed_forest_default": 25,
+            "speed_collides": 10,
+            "hitbox_size": 20,
+            "damage": 80,
+            "drop": [["KRAKEN_SKIN", 1], ["SCALES", 5]],
+            "give_score": 3000,
+            "allowedBiomes": ["SEA"]
+        },
+        "spider": {
+            "speed_forest_default": 24,
+            "speed_collides": 10,
+            "hitbox_size": 40,
+            "damage": 30,
+            "drop": [["CORD", 2]],
+            "give_score": 150,
+            "allowedBiomes": ["FOREST"]
+        },
+        "treasure_chest": {
+          "radius": 40,
+          "health": 350
+        }
+    },
+    "items": [
+        {
+            "name": "PLANT",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 20 }
+        },
+        {
+            "name": "BOTTLE_FULL",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 0 , "water": 55 }
+        },
+        {
+            "name": "BOTTLE_EMPY",
+            "type": "nothing",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "FUR",
+            "type": "nothing",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "FUR_WOLF",
+            "type": "nothing",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "WATERING_CAN",
+            "type": "nothing",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "LOCKPICK",
+            "type": "nothing",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "FLOUR",
+            "type": "nothing",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "WILDWHEAT",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 20,
+                "born_time": 120000,
+                "grow_time": 55000,
+                "drain_time": 200000,
+                "score_give": 3
+            }
+        },
+        {
+            "name": "WHEAT_SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 20,
+                "born_time": 120000,
+                "grow_time": 16000,
+                "drain_time": 120000,
+                "score_give": 6
+            }
+        },
+        {
+            "name": "PUMPKIN_SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 25,
+                "born_time": 160000,
+                "grow_time": 120000,
+                "drain_time": 120000,
+                "score_give": 6
+            }
+        },
+        {
+            "name": "CARROT_SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 15,
+                "born_time": 240000,
+                "grow_time": 30000,
+                "drain_time": 100000,
+                "score_give": 6
+            }
+        },
+        {
+            "name": "GARLIC_SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 20,
+                "born_time": 240000,
+                "grow_time": 70000,
+                "drain_time": 100000,
+                "score_give": 6
+            }
+        },
+        {
+            "name": "THORNBUSH_SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 35,
+                "born_time": 240000,
+                "grow_time": 15000,
+                "drain_time": 180000,
+                "score_give": 9,
+                "collideResolveRadius": 35,
+                "collideDamage": 20
+            }
+        },
+        {
+            "name": "TOMATO_SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 15,
+                "born_time": 240000,
+                "grow_time": 30000,
+                "drain_time": 100000,
+                "score_give": 8
+            }
+        },
+        {
+            "name": "WATERMELON_SEED",
+            "type": "building",
+            "meta_type": "plant",
+            "data": {
+                "health": 700,
+                "placeRadius": 40,
+                "damageProtection": 6,
+                "radius": 25,
+                "born_time": 240000,
+                "grow_time": 180000,
+                "drain_time": 200000,
+                "score_give": 10
+            }
+        },
+        {
+            "name": "TOMATO",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "PUMPKIN",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 30 }
+        },
+        {
+            "name": "CARROT",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 20 }
+        },
+        {
+            "name": "TOMATO",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 16 }
+        },
+        {
+            "name": "WATERMELON",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 20, "water": 25 }
+        },
+        {
+            "name": "BREAD",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 15 }
+        },
+        {
+            "name": "COOKIE",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 30 }
+        },
+        {
+            "name": "GARLIC",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 15 }
+        },
+        {
+            "name": "CAKE",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 200 }
+        },
+        {
+            "name": "SANDWITCH",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 200 }
+        },
+        {
+            "name": "MEAT",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 30, "poison": 20 }
+        },
+        {
+            "name": "FOODFISH",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 30, "poison": 20 }
+        },
+        {
+            "name": "FOODFISH_COOKED",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 60 }
+        },
+        {
+            "name": "CACTUS",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 20, "poison": 10, "water": 10 }
+        },
+        {
+            "name": "COOKED_MEAT",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 60 }
+        },
+        {
+            "name": "CRAB_STICK",
+            "type": "food",
+            "meta_type": "nothing",
+            "data": { "value": 40 }
+        },
+        {
+            "name": "BANDAGE",
+            "type": "food",
+            "meta_type": "regenerable",
+            "data": { "value": 5 }
+        },
+        {
+            "name": "ALOE_VERA",
+            "type": "food",
+            "meta_type": "regenerable",
+            "data": { "value": 1 }
+        },
+        {
+            "name": "WOOD",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "STONE",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "GOLD",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "DIAMOND",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "AMETHYST",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "REIDITE",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "EMERALD",
+            "type": "resource",
+            "meta_type": "nothing",
+            "data": {}
+        },
+        {
+            "name": "WOOD_SHIELD",
+            "type": "equippable",
+            "meta_type": "shield",
+            "data": {
+                "protection": 1,
+                "damage": 1,
+                "protectionCold": 0,
+                "expandOffset": 10,
+                "expandRadius": 35,
+                "building_damage": 3
+
+            }
+        },
+        {
+            "name": "STONE_SHIELD",
+            "type": "equippable",
+            "meta_type": "shield",
+            "data": {
+                "protection": 2,
+                "damage": 2,
+                "protectionCold": 0,
+                "expandOffset": 10,
+                "expandRadius": 35,
+                "building_damage": 3
+            }
+        },
+        {
+            "name": "GOLD_SHIELD",
+            "type": "equippable",
+            "meta_type": "shield",
+            "data": {
+                "protection": 3,
+                "damage": 3,
+                "protectionCold": 0,
+                "expandOffset": 10,
+                "expandRadius": 35,
+                "building_damage": 3
+            }
+        },
+        {
+            "name": "DIAMOND_SHIELD",
+            "type": "equippable",
+            "meta_type": "shield",
+            "data": {
+                "protection": 4,
+                "damage": 4,
+                "protectionCold": 0,
+                "expandOffset": 10,
+                "expandRadius": 35,
+                "building_damage": 3
+            }
+        },
+        {
+            "name": "AMETHYST_SHIELD",
+            "type": "equippable",
+            "meta_type": "shield",
+            "data": {
+                "protection": 5,
+                "damage": 5,
+                "protectionCold": 0,
+                "expandOffset": 10,
+                "expandRadius": 35,
+                "building_damage": 3
+            }
+        },
+        {
+            "name": "REIDITE_SHIELD",
+            "type": "equippable",
+            "meta_type": "shield",
+            "data": {
+                "protection": 6,
+                "damage": 6,
+                "protectionCold": 0,
+                "expandOffset": 10,
+                "expandRadius": 35,
+                "building_damage": 3
+            }
+        },
+        {
+            "name": "COAT",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 7,
+                "animal_protection": 0
+            }
+        },
+        {
+            "name": "EARMUFFS",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 4,
+                "animal_protection": 0
+            }
+        },
+        {
+            "name": "CAP_SCARF",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 1,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "WOOD_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 1,
+                "animal_protection": 4,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "DIVING_MASK",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 4,
+                "animal_protection": 8,
+                "protectionCold": 4,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "SUPER_DIVING_SUIT",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 4,
+                "animal_protection": 16,
+                "protectionCold": 6
+            }
+        },
+        {
+            "name": "PIRATE_HAT",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 7,
+                "animal_protection": 0,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "PEASANT",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 4,
+                "animal_protection": 0,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "EXPLORER_HAT",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 3,
+                "animal_protection": 0,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "WINTER_PEASANT",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 13,
+                "animal_protection": 0,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "HOOD",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 1,
+                "animal_protection": 0,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "EARMUFFS",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 3,
+                "animal_protection": 0,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "COAT",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 6,
+                "animal_protection": 0,
+                "withoutCooldown": true
+            }
+        },
+        {
+            "name": "STONE_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 2,
+                "animal_protection": 8,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "GOLD_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 4,
+                "animal_protection": 13,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "DIAMOND_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 5,
+                "animal_protection": 19,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "AMETHYST_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 6,
+                "animal_protection": 23,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "REIDITE_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 7,
+                "animal_protection": 25,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "DRAGON_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 8,
+                "animal_protection": 27,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "CROWN_GREEN",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 4,
+                "animal_protection": 16,
+                "protectionCold": 0,
+                "healAdjust": 50
+            }
+        },
+        {
+            "name": "CROWN_ORANGE",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 4,
+                "animal_protection": 16,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "CROWN_BLUE",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 4,
+                "protectionCold": 0,
+                "healAdjust": 50
+            }
+        },
+        {
+            "name": "LAVA_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 9,
+                "animal_protection": 30,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "CROWN_CRAB",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 11,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "PILOT_HELMET",
+            "type": "equippable",
+            "meta_type": "hat",
+            "data": {
+                "protection": 0,
+                "protectionCold": 0
+            }
+        },
+        {
+            "name": "BABY_LAVA",
+            "type": "equippable",
+            "meta_type": "riding",
+            "data": {
+                "speedUpFactor": 12,
+                "startSpeed": 2,
+                "maxSpeed": 28,
+                "rideType": "fly"
+            }
+        },
+        {
+            "name": "PLANE",
+            "type": "equippable",
+            "meta_type": "riding",
+            "data": {
+              "raiseSpeed": 0.35,
+              "slowSpeed": 0.85,
+              "maxSpeed": 24,
+              "startSpeed": 2,
+              "vehicule_type": "fly"
+            }
+        },
+        {
+            "name": "BOAT",
+            "type": "equippable",
+            "meta_type": "riding",
+            "data": {
+                "raiseSpeed": 0.95,
+                "slowSpeed": 1.50,
+                "maxSpeed": 22,
+                "startSpeed": 3,
+                "vehicule_type": "float"
+            }
+        },
+        {
+            "name": "CRAB_BOSS",
+            "type": "equippable",
+            "meta_type": "riding",
+            "data": {
+                "speedUpFactor": 7,
+                "startSpeed": 2,
+                "maxSpeed": 25,
+                
+                "rideType": "grass"
+            }
+        },
+        {
+            "name": "LAVA_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 24,
+                "building_damage": 8
+            }
+        },
+        {
+            "name": "WOOD_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 10,
+                "building_damage": 3
+            }
+        },
+        {
+            "name": "SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 14,
+                "building_damage": 4
+            }
+        },
+        {
+            "name": "GOLD_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 15,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "CRAB_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 28,
+                "building_damage": 8
+            }
+        },
+        {
+            "name": "DIAMOND_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 17,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "AMETHYST_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 18,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "REIDITE_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 22,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "DRAGON_SPEAR",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 82,
+                "expandRadius": 71,
+                "damage": 22,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "DRAGON_BOW",
+            "type": "equippable",
+            "meta_type": "bow",
+            "data": {
+                "expandOffset": 35,
+                "expandRadius": 52,
+                "damage": 0,
+                "building_damage": 0,
+                "bulletData": ["DRAGON_ARROW", 1]
+            }
+        },
+        {
+            "name": "DRAGON_ARROW",
+            "type": "resource",
+            "meta_type": "arrow",
+            "data": {
+                "expandOffset": 35,
+                "expandRadius": 52,
+                "damage": 0,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "SWORD_WOOD",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 35,
+                "expandRadius": 52,
+                "damage": 12,
+                "building_damage": 4
+            }
+        },
+        {
+            "name": "SWORD",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 37.5,
+                "expandRadius": 50,
+                "damage": 19,
+                "building_damage": 4
+            }
+        },
+        {
+            "name": "SWORD_GOLD",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 37.5,
+                "expandRadius": 50,
+                "damage": 22,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "PIRATE_SWORD",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 40.5,
+                "expandRadius": 50,
+                "damage": 24,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "SWORD_DIAMOND",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 37.5,
+                "expandRadius": 50,
+                "damage": 24,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "SWORD_AMETHYST",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 37.5,
+                "expandRadius": 50,
+                "damage": 27,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "REIDITE_SWORD",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 37.5,
+                "expandRadius": 50,
+                "damage": 30,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "DRAGON_SWORD",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 37.5,
+                "expandRadius": 50,
+                "damage": 30,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "LAVA_SWORD",
+            "type": "equippable",
+            "meta_type": "sword",
+            "data": {
+                "expandOffset": 37.5,
+                "expandRadius": 50,
+                "damage": 33,
+                "building_damage": 5
+            }
+        },
+        {
+            "name": "BOOK",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 0,
+                "building_damage": 0
+            }
+        },
+        {
+            "name": "PITCHFORK",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 85,
+                "expandRadius": 95,
+                "damage": 0,
+                "building_damage": 0
+            }
+        },
+        {
+            "name": "PITCHFORK2",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 85,
+                "expandRadius": 95,
+                "damage": 0,
+                "building_damage": 0
+            }
+        },
+        {
+            "name": "MACHETE",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 5,
+                "building_damage": 2
+            }
+        },
+        {
+            "name": "WATERING_CAN_FULL",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 55,
+                "damage": 0,
+                "building_damage": 0
+            }
+        },
+        {
+            "name": "PICK_WOOD",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 1,
+                "building_damage": 0
+            }
+        },
+        {
+            "name": "PICK",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 2,
+                "building_damage": 0
+            }
+        },
+        {
+            "name": "PICK_GOLD",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 3,
+                "building_damage": 0
+            }
+        },
+        {
+            "name": "PICK_DIAMOND",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 4,
+                "building_damage": 1
+            }
+        },
+        {
+            "name": "PICK_AMETHYST",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 5,
+                "building_damage": 2
+            }
+        },
+        {
+            "name": "PICK_REIDITE",
+            "type": "equippable",
+            "meta_type": "pickaxe",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 6,
+                "building_damage": 3
+            }
+        },
+        {
+            "name": "SPANNER",
+            "type": "equippable",
+            "meta_type": "wrenchable",
+            "data": {
+                "expandOffset": 40,
+                "expandRadius": 40,
+                "damage": 2,
+                "building_damage": 70
+            }
+        },
+        {
+            "name": "HAMMER",
+            "type": "equippable",
+            "meta_type": "hammer",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 2,
+                "building_damage": 20
+            }
+        },
+        {
+            "name": "HAMMER_GOLD",
+            "type": "equippable",
+            "meta_type": "hammer",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 3,
+                "building_damage": 30
+            }
+        },
+        {
+            "name": "HAMMER_DIAMOND",
+            "type": "equippable",
+            "meta_type": "hammer",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 4,
+                "building_damage": 40
+            }
+        },
+        {
+            "name": "HAMMER_AMETHYST",
+            "type": "equippable",
+            "meta_type": "hammer",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 5,
+                "building_damage": 50
+            }
+        },
+        {
+            "name": "HAMMER_REIDITE",
+            "type": "equippable",
+            "meta_type": "hammer",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 6,
+                "building_damage": 60
+            }
+        },
+        {
+            "name": "SUPER_HAMMER",
+            "type": "equippable",
+            "meta_type": "hammer",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 12,
+                "building_damage": 70
+            }
+        },
+        {
+            "name": "BED",
+            "type": "building",
+            "meta_type": "bed",
+            "data": {
+                "damageProtection": 2,
+                "health": 400,
+                "radius": 70,
+                "placeRadius": 45,
+                "subData": "obstacle",
+                "isGridOnly": true
+            }
+        },
+        {
+            "name": "WORKBENCH",
+            "type": "building",
+            "meta_type": "wall",
+            "data": {
+                "damageProtection": 1,
+                "health": 300,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        },
+        {
+            "name": "RESURRECTION",
+            "type": "building",
+            "meta_type": "nothing",
+            "data": {
+                "damageProtection": 6,
+                "health": 1000,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        },
+        {
+            "name": "WALL",
+            "type": "building",
+            "meta_type": "wall",
+            "data": {
+                "damageProtection": 1,
+                "health": 1000,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "WOOD_DOOR_SPIKE",
+            "type": "building",
+            "meta_type": "spiked_door",
+            "data": {
+                "damageProtection": 1,
+                "collideDamage": 5,
+                "hitDamage": 1,
+                "health": 100,
+                "radius": 40,
+                "placeRadius": 40,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "STONE_DOOR_SPIKE",
+            "type": "building",
+            "meta_type": "spiked_door",
+            "data": {
+                "damageProtection": 6,
+                "collideDamage": 10,
+                "hitDamage": 2,
+                "health": 200,
+                "radius": 40,
+                "placeRadius": 40,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "GOLD_DOOR_SPIKE",
+            "type": "building",
+            "meta_type": "spiked_door",
+            "data": {
+                "damageProtection": 6,
+                "collideDamage": 15,
+                "hitDamage": 2,
+                "health": 400,
+                "radius": 40,
+                "placeRadius": 40,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "DIAMOND_DOOR_SPIKE",
+            "type": "building",
+            "meta_type": "spiked_door",
+            "data": {
+                "damageProtection": 6,
+                "collideDamage": 25,
+                "hitDamage": 3,
+                "health": 800,
+                "radius": 40,
+                "placeRadius": 40,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "AMETHYST_DOOR_SPIKE",
+            "type": "building",
+            "meta_type": "spiked_door",
+            "data": {
+                "damageProtection": 6,
+                "collideDamage": 30,
+                "hitDamage": 3,
+                "health": 1600,
+                "radius": 40,
+                "placeRadius": 40,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "REIDITE_DOOR_SPIKE",
+            "type": "building",
+            "meta_type": "spiked_door",
+            "data": {
+                "damageProtection": 6,
+                "health": 2000,
+                "collideDamage": 35,
+                "hitDamage": 4,
+                "radius": 40,
+                "placeRadius": 40,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "WOOD_DOOR",
+            "type": "building",
+            "meta_type": "door",
+            "data": {
+                "damageProtection": 1,
+                "health": 1000,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "STONE_DOOR",
+            "type": "building",
+            "meta_type": "door",
+            "data": {
+                "damageProtection": 6,
+                "health": 1500,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "GOLD_DOOR",
+            "type": "building",
+            "meta_type": "door",
+            "data": {
+                "damageProtection": 6,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "DIAMOND_DOOR",
+            "type": "building",
+            "meta_type": "door",
+            "data": {
+                "damageProtection": 6,
+                "health": 2500,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "AMETHYST_DOOR",
+            "type": "building",
+            "meta_type": "door",
+            "data": {
+                "damageProtection": 6,
+                "health": 3500,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "REIDITE_DOOR",
+            "type": "building",
+            "meta_type": "door",
+            "data": {
+                "damageProtection": 6,
+                "health": 4000,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "EMERALD_MACHINE",
+            "type": "building",
+            "meta_type": "scoreable",
+            "data": {
+                "scoreGives": 50,
+                "damageProtection": 6,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 55,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "STONE_WALL",
+            "type": "building",
+            "meta_type": "wall",
+            "data": {
+                "damageProtection": 6,
+                "health": 1500,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "GOLD_WALL",
+            "type": "building",
+            "meta_type": "wall",
+            "data": {
+                "damageProtection": 6,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "DIAMOND_WALL",
+            "type": "building",
+            "meta_type": "wall",
+            "data": {
+                "damageProtection": 6,
+                "health": 2500,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "AMETHYST_WALL",
+            "type": "building",
+            "meta_type": "wall",
+            "data": {
+                "damageProtection": 6,
+                "health": 3500,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "REIDITE_WALL",
+            "type": "building",
+            "meta_type": "wall",
+            "data": {
+                "damageProtection": 6,
+                "health": 3000,
+                "radius": 40,
+                "placeRadius": 40,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "SPIKE",
+            "type": "building",
+            "meta_type": "SPIKED_WALL",
+            "data": {
+                "damageProtection": 2,
+                "collideDamage": 10,
+                "hitDamage": 2,
+                "health": 150,
+                "radius": 33,
+                "placeRadius": 46,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+                
+            }
+        },
+        {
+            "name": "STONE_SPIKE",
+            "type": "building",
+            "meta_type": "SPIKED_WALL",
+            "data": {
+                "damageProtection": 5,
+                "collideDamage": 20,
+                "hitDamage": 3,
+                "health": 300,
+                "radius": 33,
+                "placeRadius": 46,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "GOLD_SPIKE",
+            "type": "building",
+            "meta_type": "SPIKED_WALL",
+            "data": {
+                "damageProtection": 5,
+                "collideDamage": 30,
+                "hitDamage": 3,
+                "health": 600,
+                "radius": 33,
+                "placeRadius": 46,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "DIAMOND_SPIKE",
+            "type": "building",
+            "meta_type": "SPIKED_WALL",
+            "data": {
+                "damageProtection": 5,
+                "collideDamage": 40,
+                "hitDamage": 4,
+                "health": 1200,
+                "radius": 33,
+                "placeRadius": 46,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "AMETHYST_SPIKE",
+            "type": "building",
+            "meta_type": "SPIKED_WALL",
+            "data": {
+                "damageProtection": 5,
+                "collideDamage": 50,
+                "hitDamage": 4,
+                "health": 2400,
+                "radius": 33,
+                "placeRadius": 46,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "REIDITE_SPIKE",
+            "type": "building",
+            "meta_type": "SPIKED_WALL",
+            "data": {
+                "damageProtection": 10,
+                "collideDamage": 60,
+                "hitDamage": 5,
+                "health": 3000,
+                "radius": 33,
+                "placeRadius": 46,
+                "collideResolveRadius": 54,
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "TOTEM",
+            "type": "building",
+            "meta_type": "TOTEM",
+            "data": {
+                "damageProtection": 3,
+                "health": 200,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        },
+        {
+            "name": "ROOF",
+            "type": "building",
+            "meta_type": "nothing",
+            "data": {
+                "damageProtection": 5,
+                "health": 500,
+                "radius": 50,
+                "placeRadius": 40,
+                "isGridOnly": true,
+                "subData": "obstacle",
+                "healthSendable": true
+            }
+        },
+        {
+            "name": "PLOT",
+            "type": "building",
+            "meta_type": "plot",
+            "data": {
+                "damageProtection": 6,
+                "health": 2000,
+                "radius": 50,
+                "placeRadius": 40,
+                "subData": "obstacle",
+                "isGridOnly": true
+            }
+        },
+        {
+          "name": "BRIDGE",
+          "type": "building",
+          "meta_type": "nothing",
+          "data": {
+              "damageProtection": 5,
+              "health": 500,
+              "radius": 50,
+              "placeRadius": 40,
+              "subData": "obstacle",
+              "isGridOnly": true,
+              "healthSendable": true
+          }
+      },
+        {
+            "name": "CHEST",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 6,
+                "health": 800,
+                "radius": 20,
+                "placeRadius": 30
+            }
+        },
+        {
+            "name": "FIRE",
+            "type": "building",
+            "meta_type": "fire",
+            "data": {
+                "damageProtection": 2,
+                "health": 150,
+                "radius": 20,
+                "subData": "obstacle",
+                "placeRadius": 30,
+                "collideResolveRadius": 30,
+                "collideDamage": 40,
+                "aliveTime": 120000
+            }
+        },
+        {
+            "name": "BIG_FIRE",
+            "type": "building",
+            "meta_type": "fire",
+            "data": {
+                "damageProtection": 2,
+                "health": 150,
+                "radius": 35,
+                "subData": "obstacle",
+                "placeRadius": 30,
+                "collideResolveRadius": 30,
+                "collideDamage": 40,
+                "aliveTime": 240000
+            }
+        },
+        {
+            "name": "FURNACE",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 4,
+                "health": 1000,
+                "placeRadius": 35,
+                "radius": 45,
+                "collideResolveRadius": 30,
+                "collideDamage": 40
+            }
+        },
+        {
+            "name": "SHOVEL",
+            "type": "equippable",
+            "meta_type": "shovel",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 1,
+                "building_damage": 0,
+                "mine_increase": 1
+            }
+        },
+        {
+            "name": "SHOVEL_GOLD",
+            "type": "equippable",
+            "meta_type": "shovel",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 2,
+                "building_damage": 0,
+                "mine_increase": 2
+            }
+        },
+        {
+            "name": "SHOVEL_DIAMOND",
+            "type": "equippable",
+            "meta_type": "shovel",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 3,
+                "building_damage": 0,
+                "mine_increase": 3
+            }
+        },
+        {
+            "name": "SHOVEL_AMETHYST",
+            "type": "equippable",
+            "meta_type": "shovel",
+            "data": {
+                "expandOffset": 45,
+                "expandRadius": 45,
+                "damage": 3,
+                "building_damage": 0,
+                "mine_increase": 4
+            }
+        },
+        {
+            "name": "WINDMILL",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 1,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 60
+            }
+        },
+        {
+            "name": "BREAD_OVEN",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 1,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 50
+            }
+        },
+        {
+            "name": "EXTRACTOR_MACHINE_STONE",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 1,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        },
+        {
+            "name": "EXTRACTOR_MACHINE_GOLD",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 3,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        },
+        {
+            "name": "EXTRACTOR_MACHINE_DIAMOND",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 3,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        },
+        {
+            "name": "EXTRACTOR_MACHINE_AMETHYST",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 3,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        },
+        {
+            "name": "EXTRACTOR_MACHINE_REIDITE",
+            "type": "building",
+            "meta_type": "storage",
+            "data": {
+                "damageProtection": 3,
+                "health": 2000,
+                "radius": 40,
+                "placeRadius": 40
+            }
+        }
+    ],
+    "world": {
+        "Width": 20100,
+        "Height": 20100,
+        "resources": {
+            "resource_fill_min": 300,
+            "resource_fill_max": 5000,
+            "resource_fill_online_formula": [10,10]
+        },
+        "hi": 0,
+        "islands": [[[9600, 9600], [10800, 10600]]],
+        "map":[
+            [
+                2,
+                "isl",
+                1,
+                100,
+                100,
+                0
+            ],
+            [
+                2,
+                "isl",
+                1,
+                103,
+                102,
+                0
+            ],
+            [
+                2,
+                "isl",
+                0,
+                103,
+                100,
+                0
+            ],
+            [
+                2,
+                "isl",
+                1,
+                100,
+                102,
+                0
+            ],
+            [
+                1,
+                "plm",
+                2,
+                100,
+                101,
+                0
+            ],
+            [
+                1,
+                "s",
+                0,
+                104,
+                99,
+                1
+            ],
+            [
+                1,
+                "s",
+                2,
+                105,
+                100,
+                1
+            ],
+            [
+                1,
+                "p",
+                0,
+                103,
+                102,
+                1
+            ],
+            [
+                1,
+                "s",
+                1,
+                98,
+                99,
+                1
+            ],
+            [
+                1,
+                "s",
+                1,
+                99,
+                103,
+                1
+            ],
+            [
+                1,
+                "plm",
+                2,
+                102,
+                98,
+                0
+            ],
+            [
+                1,
+                "s",
+                1,
+                105,
+                103,
+                1
+            ],
+            [
+                1,
+                "plm",
+                1,
+                98,
+                103,
+                0
+            ],
+            [
+                1,
+                "plm",
+                0,
+                102,
+                104,
+                0
+            ],
+            [
+                1,
+                "plm",
+                0,
+                106,
+                102,
+                0
+            ]
+        ]
+
+
+    
+    },
+    "welcomeMessage": "#FBDA2C ====================\n#ff0000 Welcome to Sea Farm \n#3454FB Our Discord: discord.gg/famishs \n#FBDA2C ====================",
+   
+    "kit": ["PLANT", 50, "WHEAT_SEED", 5, "BIG_FIRE", 3, "WATERING_CAN", 1, "PLOT", 50, "BRIDGE", 30, "FUR_WOLF", 4, "CORD", 20, "FUR", 5, "WINDMILL", 1, "BOAT", 1, "PENGUIN_FEATHER", 15, "CHEST", 5]
+}

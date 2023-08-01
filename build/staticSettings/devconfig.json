@@ -1,0 +1,10 @@
+{
+    "http_port": 8081,
+    "websocket_port": 80,
+    "socket_link": "seafarm.famishs.io",
+    "server_version": 1,
+    "env_mode": "PROD",
+    "mode": "normal",
+    "restore_keyPassword": "00OOoozpOa;lzOkakzopopoOo0a90f9zj8HHISFHIZOIoioidoibi9S9H0G",
+    "isSSL": false
+}

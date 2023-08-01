@@ -1,0 +1,13 @@
+[{
+    "name": "eventName",
+    "type": "interval",
+    "params": "-interval 250",
+    "condition": "",
+    "commands": ["bc hello :)"]
+}, {
+    "name": "firstKill",
+    "type": "kill",
+    "params": "-value 1",
+    "condition": "",
+    "commands": ["bc died :) {kills}"]
+}]
